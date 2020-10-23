@@ -38,7 +38,7 @@ and all resnet architectures are defined in the file `resnet.py`.
 `Linear -> ReLu -> Linear -> Softmax`. The next table gives the number
 of neurons in the hidden layer:
 
-| \# hidden neurons | \# params
+ | \# hidden neurons | \# params
 :-:|:-:|:-:
 1 | 58  | 82,810
 2 | 200 | 285,400
@@ -49,7 +49,7 @@ of neurons in the hidden layer:
  `Linear -> ReLu -> Linear -> ReLu -> Linear -> Softmax`. The next table gives the number
 of neurons in the hidden layer:
 
-| \# hidden neurons | \# params
+ | \# hidden neurons | \# params
 :-:|:-:|:-:
 1 |  55 |  81,855
 2 | 180 | 289,480
@@ -58,7 +58,7 @@ of neurons in the hidden layer:
 
 - **resnet-c**: resnet models with channels constant across the convolutional layers:
 
-| \# channels per block | \# conv layers per block | \# params
+ | \# channels per block | \# conv layers per block | \# params
 :-:|:-:|:-:|:-:
 1 | `[20, 20, 20]` | `[3, 3, 3]` |   81,855
 2 | `[40, 40, 40]`  | `[3, 3, 3]` |   297,536
@@ -69,7 +69,7 @@ of neurons in the hidden layer:
 - **resnet-w**: resnet models with channels  with the number of channels doubling at 
   every block where downsampling takes place:
 
-| \# channels per block | \# conv layers per block | \# params
+ | \# channels per block | \# conv layers per block | \# params
 :-:|:-:|:-:|:-:
 1 | `[8, 16, 32]` | `[3, 3, 3]` |   81,855
 2 | `[16, 32, 64]`  | `[3, 3, 3]` |   297,536
@@ -79,7 +79,7 @@ of neurons in the hidden layer:
 
 - **resnet-d**: resnet models with increasing the depth:
 
-| \# channels per block | \# conv layers per block | \# params
+ | \# channels per block | \# conv layers per block | \# params
 :-:|:-:|:-:|:-:
 1 | `[16, 32, 64]` | `[1, 1, 1]` |   81,855
 2 | `[16, 32, 64]`  | `[3, 3, 3]` |   297,536
