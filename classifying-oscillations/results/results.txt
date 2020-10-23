@@ -7,10 +7,6 @@ fully_connected_tiny_2hidden,1.00,20,81855,54.660
 fully_connected_small_2hidden,1.00,20,289480,92.850
 fully_connected_medium_2hidden,1.00,20,1216000,98.130
 fully_connected_large_2hidden,1.00,20,4389400,98.660
-fully_connected_tiny_3hidden,1.00,20,81649,51.830
-fully_connected_small_3hidden,1.00,20,279920,91.110
-fully_connected_medium_3hidden,1.00,20,1213900,98.080
-fully_connected_large_3hidden,1.00,20,4286450,96.970
 resnet20_tiny_const,1.00,20,75020,99.130
 resnet20_small_const,1.00,20,280840,99.330
 resnet20_medium_const,1.00,20,1086080,99.400
@@ -19,10 +15,6 @@ resnet20_tiny_incr,1.00,20,81512,99.080
 resnet20_small_incr,1.00,20,297536,99.180
 resnet20_medium_incr,1.00,20,1134320,99.360
 resnet20_large_incr,1.00,20,4426832,99.410
-resnet20_tiny_fincr,1.00,20,81512,99.110
-resnet20_small_fincr,1.00,20,312584,99.140
-resnet20_medium_fincr,1.00,20,1142499,99.290
-resnet20_large_fincr,1.00,20,4347155,99.290
 resnet8_small_incr,1.00,20,103104,99.080
 resnet20_small_incr,1.00,20,297536,99.240
 resnet32_small_incr,1.00,20,491968,99.290
@@ -38,10 +30,6 @@ fully_connected_tiny_2hidden,2.00,20,81855,13.450
 fully_connected_small_2hidden,2.00,20,289480,38.250
 fully_connected_medium_2hidden,2.00,20,1216000,67.790
 fully_connected_large_2hidden,2.00,20,4389400,78.160
-fully_connected_tiny_3hidden,2.00,20,81649,11.470
-fully_connected_small_3hidden,2.00,20,279920,37.380
-fully_connected_medium_3hidden,2.00,20,1213900,64.320
-fully_connected_large_3hidden,2.00,20,4286450,66.050
 resnet20_tiny_const,2.00,20,75020,98.130
 resnet20_small_const,2.00,20,280840,98.460
 resnet20_medium_const,2.00,20,1086080,98.730
@@ -50,10 +38,6 @@ resnet20_tiny_incr,2.00,20,81512,97.930
 resnet20_small_incr,2.00,20,297536,98.270
 resnet20_medium_incr,2.00,20,1134320,98.590
 resnet20_large_incr,2.00,20,4426832,98.710
-resnet20_tiny_fincr,2.00,20,81512,97.590
-resnet20_small_fincr,2.00,20,312584,98.150
-resnet20_medium_fincr,2.00,20,1142499,98.320
-resnet20_large_fincr,2.00,20,4347155,98.420
 resnet8_small_incr,2.00,20,103104,98.020
 resnet20_small_incr,2.00,20,297536,98.300
 resnet32_small_incr,2.00,20,491968,98.390
@@ -69,10 +53,6 @@ fully_connected_tiny_2hidden,4.00,20,81855,1.630
 fully_connected_small_2hidden,4.00,20,289480,2.930
 fully_connected_medium_2hidden,4.00,20,1216000,4.450
 fully_connected_large_2hidden,4.00,20,4389400,3.630
-fully_connected_tiny_3hidden,4.00,20,81649,1.130
-fully_connected_small_3hidden,4.00,20,279920,2.060
-fully_connected_medium_3hidden,4.00,20,1213900,3.290
-fully_connected_large_3hidden,4.00,20,4286450,3.430
 resnet20_tiny_const,4.00,20,75020,81.810
 resnet20_small_const,4.00,20,280840,94.670
 resnet20_medium_const,4.00,20,1086080,97.530
@@ -81,10 +61,6 @@ resnet20_tiny_incr,4.00,20,81512,79.190
 resnet20_small_incr,4.00,20,297536,89.330
 resnet20_medium_incr,4.00,20,1134320,95.950
 resnet20_large_incr,4.00,20,4426832,97.520
-resnet20_tiny_fincr,4.00,20,81512,77.400
-resnet20_small_fincr,4.00,20,312584,89.370
-resnet20_medium_fincr,4.00,20,1142499,90.590
-resnet20_large_fincr,4.00,20,4347155,95.610
 resnet8_small_incr,4.00,20,103104,83.460
 resnet20_small_incr,4.00,20,297536,86.790
 resnet32_small_incr,4.00,20,491968,94.090
@@ -100,10 +76,6 @@ fully_connected_tiny_2hidden,8.00,20,81855,0.390
 fully_connected_small_2hidden,8.00,20,289480,0.400
 fully_connected_medium_2hidden,8.00,20,1216000,0.410
 fully_connected_large_2hidden,8.00,20,4389400,0.460
-fully_connected_tiny_3hidden,8.00,20,81649,0.380
-fully_connected_small_3hidden,8.00,20,279920,0.370
-fully_connected_medium_3hidden,8.00,20,1213900,0.430
-fully_connected_large_3hidden,8.00,20,4286450,0.320
 resnet20_tiny_const,8.00,20,75020,19.040
 resnet20_small_const,8.00,20,280840,43.390
 resnet20_medium_const,8.00,20,1086080,58.410
@@ -112,10 +84,6 @@ resnet20_tiny_incr,8.00,20,81512,1.120
 resnet20_small_incr,8.00,20,297536,43.180
 resnet20_medium_incr,8.00,20,1134320,57.200
 resnet20_large_incr,8.00,20,4426832,72.850
-resnet20_tiny_fincr,8.00,20,81512,1.220
-resnet20_small_fincr,8.00,20,312584,39.250
-resnet20_medium_fincr,8.00,20,1142499,38.020
-resnet20_large_fincr,8.00,20,4347155,55.720
 resnet8_small_incr,8.00,20,103104,25.680
 resnet20_small_incr,8.00,20,297536,47.130
 resnet32_small_incr,8.00,20,491968,40.260

@@ -30,13 +30,27 @@ matplotlib.rcParams.update(params)
 
 
 if __name__ == '__main__':
+    import argparse
+    import os
+
+    parser = argparse.ArgumentParser(description='Plot ilustrative samples of the task.')
+    parser.add_argument('-i', '--input', default='results/results.txt',
+                        help='input csv file')
+    parser.add_argument('-s', '--save', nargs='?', default='', const='img/toy_example_acc.png',
+                        help='output file.')
+    args, unk = parser.parse_known_args()
+
+    # Create directory if needed
+    d = os.path.dirname(args.save)
+    if not os.path.isdir(d) and d:
+        os.mkdir(d)
+
     results = pd.read_csv('results/results.txt')
 
     noise_intensities = np.unique(results.noise_intens)
-    tps = ['fc-1h', 'fc-2h', 'fc-3h', 'resnet-c', 'resnet-w', 'resnet-fw', 'resnet-d']
+    tps = ['fc-1h', 'fc-2h', 'resnet-c', 'resnet-w', 'resnet-d']
     n = len(noise_intensities)  # different noise intensities
     results['type'] = np.tile(np.concatenate((np.repeat(tps[:-1], 4), ['resnet-d']*7)), n)
-
 
     tps = ['fc-1h', 'fc-2h', 'resnet-c', 'resnet-w', 'resnet-d']
     markers = ['d', '^', 'o', 'x', '*']
@@ -51,7 +65,6 @@ if __name__ == '__main__':
             n_params = filtered_results['n_params']
             acc = filtered_results['acc.']
             line, = ax[i // cols, i % cols].plot(n_params, acc/100, marker=m, linestyle=ls, markersize=6)
-            #ax[i // cols, i % cols].set_ylim((0.003, 1-0.00400))
             ax[i // cols, i % cols].set_yscale('logit')
             ax[i // cols, i % cols].yaxis.set_major_formatter(tk.LogitFormatter(one_half='0.5'))
             ax[i // cols, i % cols].set_xscale('log')
@@ -73,5 +86,7 @@ if __name__ == '__main__':
             if i // cols == 0 and i % cols == 1:
                 line.set_label(tp)
                 ax[i // cols, i % cols].legend(bbox_to_anchor=(1.01, 1), loc='upper left',)
-    plt.savefig('img/toy_example_acc.png', bbox_inches='tight')
-    #plt.show()
+    if args.save:
+        plt.savefig(args.save, bbox_inches='tight')
+    else:
+        plt.show()

@@ -20,23 +20,32 @@ class FullyConnected(nn.Module):
         x = self.classifier(x)
         return x
 
+types={'tiny_shallow': (0, 58),  # 82,810
+       'small_shallow': (0, 200),  # 285,400
+       'medium_shallow': (0, 800),  # 1,140,400
+       'large_shallow': (0, 3000),  # 4,275,400
+       'tiny_2hidden': (1, 55),  # 81,855
+       'small_2hidden': (1, 180),  # 289,480
+       'medium_2hidden': (1, 600),  # 1,216,000
+       'large_2hidden': (1, 1500),  # 4,389,400
+        }
+
 
 def fully_connected(n_classes=400, img_size=(32, 32), tp='small_shallow', dropout=0.5):
-    types={'tiny_shallow': (0, 58),  # 82,810
-           'small_shallow': (0, 200),  # 285,400
-           'medium_shallow': (0, 800),  # 1,140,400
-           'large_shallow': (0, 3000),  # 4,275,400
-           'tiny_2hidden': (1, 55),  # 81,855
-           'small_2hidden': (1, 180),  # 289,480
-           'medium_2hidden': (1, 600),  # 1,216,000
-           'large_2hidden': (1, 1500),  # 4,389,400
-            }
+
     n_hidden_layers, n_hidden = types[tp]
     return FullyConnected(n_classes, img_size, n_hidden_layers, n_hidden, dropout)
 
 
 if __name__ == '__main__':
-    net = fully_connected(tp='tiny_2hidden', dropout=0)
+    import argparse
+
+    parser = argparse.ArgumentParser(description='Plot ilustrative samples of the task.')
+    parser.add_argument('--arch', default='tiny_2hidden', choices=list(types.keys()),
+                        help='type of neural network.')
+    args, unk = parser.parse_known_args()
+
+    net = fully_connected(tp=args.arch, dropout=0)
 
     print(net)
     print('num of parameters = {}'.format(sum(p.numel() for p in net.parameters() if p.requires_grad)))

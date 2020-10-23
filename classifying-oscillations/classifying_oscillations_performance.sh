@@ -1,10 +1,11 @@
 #! /bin/bash
 
 MILESTONES="35"
+OUTPUT=$1
 EPOCHS=50
 i=0
 
-printf "%s\n" "arch,noise_intens,n_freqs,n_params,acc." > results.txt
+printf "%s\n" "arch,noise_intens,n_freqs,n_params,acc." > $OUTPUT
 
 N=20
 for NOISE in 1.0 2.0 4.0 8.0;
@@ -33,6 +34,6 @@ do
         echo "Best acc. = $ACC"
         echo "n params = $NPARAMS"
         echo "**************************************"
-        printf "%s,%.2f,%d,%d,%2.3f\n" $ARCH $NOISE $N $NPARAMS $ACC >> results.txt
+        printf "%s,%.2f,%d,%d,%2.3f\n" $ARCH $NOISE $N $NPARAMS $ACC >> $OUTPUT
     done;
 done

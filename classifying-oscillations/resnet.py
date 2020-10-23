@@ -150,6 +150,18 @@ def resnet272(num_classes=400, tp='small_incr'):  # 4,380,608
 
 
 if __name__ == '__main__':
+    import argparse
+    import re
+
+    parser = argparse.ArgumentParser(description='Plot ilustrative samples of the task.')
+    parser.add_argument('--arch', default='resnet20_small_incr', type=str,
+                        help='type of neural network.')
+    args, unk = parser.parse_known_args()
+
+    p = 'resnet[0-9]+'
+    name = args.arch[slice(*re.match(p, args.arch).regs[0])]
+    print(name)
+    tp = re.split(p + '_', args.arch)[1]
     net = resnet8(tp='small_incr')
 
     print(net)

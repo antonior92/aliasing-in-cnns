@@ -61,6 +61,13 @@ class OscilationsDataset(object):
 
 if __name__ == "__main__":
     import matplotlib.pyplot as plt
+    import argparse
+    import os
+
+    parser = argparse.ArgumentParser(description='Plot ilustrative samples of the task.')
+    parser.add_argument('-s', '--save', nargs='?', default='', const='img/',
+                        help='Output folder.')
+    args, unk = parser.parse_known_args()
 
     N = 32
     n = 10
@@ -75,7 +82,7 @@ if __name__ == "__main__":
     img_size = (N, N)
     osc = OscilationsDataset._getimgs(freq, phase, img_size, ampl, seeds=range(len(freq_x)))
 
-    def plot_signal_and_fft(x, n, save=False):
+    def plot_signal(x, n, save):
         # Plot signal
         plt.imshow(x, cmap='Greys')
         plt.xticks([0, 8, 16, 24, 32])
@@ -84,8 +91,11 @@ if __name__ == "__main__":
         plt.tight_layout()
         if save:
             plt.axis('off')
-            plt.savefig('img/oscil_{}.png'.format(n), bbox_inches='tight', pad_inches=0.2)
-        plt.show()
+            plt.savefig(os.path.join(args.save, 'oscil_{}.png'.format(n)), bbox_inches='tight', pad_inches=0.2)
+        else:
+            plt.show()
 
+    if not os.path.isdir(args.save) and args.save:
+        os.mkdir(args.save)
     for i in range(len(freq_x)):
-        plot_signal_and_fft(osc[i, 0, :, :], str(i+1), True)
+        plot_signal(osc[i, 0, :, :], str(i+1), args.save)

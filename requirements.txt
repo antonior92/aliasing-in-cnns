@@ -1,0 +1,8 @@
+python>=3.6
+numpy==1.17.2
+pandas==0.25.2
+torchattacks==1.1
+pytorch==1.4.0
+matplotlib==3.2.1
+torchvision=0.5.0
+tqdm>=4.26
