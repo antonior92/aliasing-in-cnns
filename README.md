@@ -9,9 +9,9 @@ Ribeiro, A.H. and Schon T.B. "How Convolutional Neural Networks Deal with Aliasi
 
 The folders in this repository contain two experiments:
 
-1. [classifying-oscillations](./classifying-oscillations/README.md): toy example designed to assess the ability
+1. [classifying-oscillations](./classifying-oscillations): toy example designed to assess the ability
     of convolutional neural networks to resolve between different frequencies at its input.
-1. [quantifying-aliasing](./quantifying-aliasing/README.md): Scripts for quantifying to what extent aliasing takes 
+1. [quantifying-aliasing](./quantifying-aliasing): Scripts for quantifying to what extent aliasing takes 
     place in the intermediate layers of the neural network
     
 Requirements
