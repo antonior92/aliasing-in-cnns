@@ -39,7 +39,7 @@ the 32 by 32 oscillatory patterns at the input.
 
 ```bash
 # NOTE: Generate figures and save then inside the directory 'img/' by running:
-python generate_plot_data.py --save img
+python data.py --save img
 ```
 For the images above, however, If the image is downsampled by a factor of two,
 the patterns become **indistinguishable due to aliasing**. For the CNN models, 
@@ -55,7 +55,7 @@ different noise intensities `A`:
 ![toy_example_acc](img/toy_example_acc.png)
 ```bash
 # NOTE: Generate figure and save it inside the directory 'img/' by running:
-python generate_plot_data.py --input results/results.txt --save img/toy_example_acc.png 
+python plot_performance.py --input results/results.txt --save img/toy_example_acc.png 
 ```
 
 ### Running the experiments
