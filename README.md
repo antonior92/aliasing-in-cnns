@@ -1,11 +1,26 @@
 # How Convolutional Neural Networks Deal with Aliasing
 
-Python scripts for reproducing the up-coming paper: "How Convolutional Neural Networks Deal with Aliasing".
+Python scripts for reproducing the results from the paper: ["How Convolutional Neural Networks Deal with Aliasing"](https://arxiv.org/abs/2102.07757).
 
+Citation:
 ```
-Ribeiro, A.H. and Schon T.B. "How Convolutional Neural Networks Deal with Aliasing". Under Review.
+Ribeiro, A.H. and Schon T.B. "How Convolutional Neural Networks Deal with Aliasing". IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2021.
+```
+```
+@inproceedings{ribeiro_how_2021,
+author={Ant\^onio H. Ribeiro and Thomas B. Sch\"on},
+title={How Convolutional Neural Networks Deal with
+Aliasing},
+year={2021},
+publisher={IEEE},
+booktitle={2021 {IEEE} International Conference on
+Acoustics, Speech and Signal Processing, {ICASSP}}
 ```
 
+Preprint: https://arxiv.org/abs/2102.07757
+
+
+------
 
 The folders in this repository contain two experiments:
 
