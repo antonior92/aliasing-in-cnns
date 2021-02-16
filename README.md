@@ -2,9 +2,8 @@
 
 Python scripts for reproducing the results from the paper: ["How Convolutional Neural Networks Deal with Aliasing"](https://arxiv.org/abs/2102.07757).
 
-Citation:
 ```
-Ribeiro, A.H. and Schon T.B. "How Convolutional Neural Networks Deal with Aliasing". IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2021.
+Antônio H. Ribeiro and Thomas B. Schön "How Convolutional Neural Networks Deal with Aliasing". IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2021.
 ```
 ```
 @inproceedings{ribeiro_how_2021,
