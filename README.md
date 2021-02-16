@@ -13,8 +13,7 @@ title={How Convolutional Neural Networks Deal with
 Aliasing},
 year={2021},
 publisher={IEEE},
-booktitle={2021 {IEEE} International Conference on
-Acoustics, Speech and Signal Processing, {ICASSP}}
+booktitle={2021 {IEEE} International Conference on Acoustics, Speech and Signal Processing, {ICASSP}}
 ```
 
 Preprint: https://arxiv.org/abs/2102.07757
